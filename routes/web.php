@@ -5,6 +5,9 @@ use App\Http\Controllers\RapportActiviteFrontImageController;
 use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use App\Http\Controllers\TestMultipagesController;
 use App\Http\Controllers\TestMultipagesV2Controller;
+use App\Http\Controllers\TestWeasyprintController;
+use App\Http\Controllers\TestSvgController;
+use App\Http\Controllers\BenchmarkController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,3 +35,11 @@ Route::get('/test-multipages/spatie', [TestMultipagesController::class, 'spatie'
 Route::get('/test-v2/dompdf', [TestMultipagesV2Controller::class, 'dompdf']);
 Route::get('/test-v2/mpdf',   [TestMultipagesV2Controller::class, 'mpdf']);
 Route::get('/test-v2/spatie', [TestMultipagesV2Controller::class, 'spatie']);
+
+Route::get('/test-v2/weasyprint', [TestWeasyprintController::class, 'apercu']);
+
+Route::get('/test-svg/dompdf',     [TestSvgController::class, 'dompdf']);
+Route::get('/test-svg/mpdf',       [TestSvgController::class, 'mpdf']);
+Route::get('/test-svg/weasyprint', [TestSvgController::class, 'weasyprint']);
+
+Route::get('/benchmark', [BenchmarkController::class, 'run']);
