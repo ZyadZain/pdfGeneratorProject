@@ -47,6 +47,10 @@ class RapportActiviteService
             'chiffreAffairesTotal' => round(array_sum(array_column($produitsVendus, 'total')), 2),
             'commentaire' => "Bonne dynamique sur les accessoires audio ce mois-ci, hausse portée par une opération commerciale.",
             'urlGraphique' => $this->construireUrlGraphique($chiffreAffairesParMois),
+            // Données brutes, en plus de l'image ci-dessus : utilisées par la
+            // version "Chart.js réel" du rapport (test Browsershot), qui
+            // dessine le graphique elle-même au lieu de charger une image.
+            'chiffreAffairesParMois' => $chiffreAffairesParMois,
         ];
     }
 

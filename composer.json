@@ -12,7 +12,12 @@
         "php": "^8.3",
         "barryvdh/laravel-dompdf": "^3.1",
         "laravel/framework": "^13.17",
-        "laravel/tinker": "^3.0"
+        "laravel/tinker": "^3.0",
+        "mpdf/mpdf": "^8.3",
+        "setasign/fpdi": "^2.6",
+        "spatie/browsershot": "^5.4",
+        "spatie/laravel-pdf": "^2.13",
+        "tecnickcom/tcpdf": "^6.6"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
